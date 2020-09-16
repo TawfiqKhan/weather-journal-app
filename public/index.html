@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="css/weather-icons.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+      <script
+         src="https://kit.fontawesome.com/4cfb43502c.js"
+         crossorigin="anonymous"
+         ></script>
+      <title>Test Page</title>
+   </head>
+   <body>
+      <div id="container">
+         <header>
+            <h2 class="site-title">Check Weather of Any US Location</h2>
+            <form onsubmit="performAction()" id="form">
+               <label class="text" for="zip">Zip code: </label>
+               <input
+                  id="zip"
+                  type="text"
+                  name="zip"
+                  placeholder="Zip Code"
+                  />
+               <!-- 					<br /> -->
+               <label class="text" for="feelings"
+                  >Your expected weather?</label
+                  >
+               <textarea
+                  id="feelings"
+                  placeholder="Your Comment"
+                  ></textarea>
+               <button id="generate" type="submit">
+               Generate
+               </button>
+            </form>
+            <h4 class="error"></h4>
+         </header>
+         <main id="main-body">
+            <section id="side-section" class="hide">
+               <div class="side-entry">
+                  <h3>All the Entries</h3>
+               </div>
+            </section>
+            <section id="main-section" class="main-entry hide">
+               <h3>Recent Entry</h3>
+               <div class="weather-data">
+                  <h4 class="location-title">Weather Data for <span id="name"></span>, <span id="date"></span></h4>
+                  <div class="main-heading">
+                     <img
+                        id="main-icon"
+                        src="http://openweathermap.org/img/wn/10d@2x.png"
+                        />
+                     <p class="heading main-temp">
+                        <span id="temp"></span><span> F</span>
+                     </p>
+                  </div>
+                  <div class="infos">
+                     <i class="wi wi-cloud icons"></i>
+                     <p class="heading">
+                        Cloud Level: <span id="cloud"></span>
+                     </p>
+                  </div>
+                  <div class="infos">
+                     <i class="wi wi-humidity icons"></i>
+                     <p class="heading">
+                        Humidity: <span id="humidity"></span> <span>%</span>
+                     </p>
+                  </div>
+                  <div class="infos">
+                     <i class="wi wi-sunrise icons"></i>
+                     <p class="heading">
+                        Sunrise: <span id="sunrise"></span><span> UTC</span>
+                     </p>
+                  </div>
+                  <div class="infos">
+                     <i class="wi wi-sunset icons"></i>
+                     <p class="heading">
+                        Sunset: <span id="sunset"></span><span> UTC</span>
+                     </p>
+                  </div>
+                  <div class="infos">
+                     <i class="fas fa-comment-alt icons"></i>
+                     <p class="heading">
+                        Your Feelings:
+                        <span id="content"></span>
+                     </p>
+                  </div>
+               </div>
+            </section>
+         </main>
+      </div>
+      <script src="app.js"  type="text/javascript"></script>
+   </body>
+</html>
